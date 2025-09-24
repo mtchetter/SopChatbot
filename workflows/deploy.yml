@@ -10,12 +10,12 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
     
-    - name: Set up Python 3.11
+    - name: Set up Python 3.13.3
       uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
+        python-version: '3.13.3'
     
     - name: Install dependencies
       run: |
@@ -27,3 +27,4 @@ jobs:
       with:
         app-name: 'hei-sopchatbot-dev'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+
