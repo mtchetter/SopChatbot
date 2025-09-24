@@ -1,0 +1,10 @@
+# BANDA KI MANIFEST.IN - Include static and template files
+include README.md
+include requirements.txt
+include .env
+recursive-include static *
+recursive-include templates *
+recursive-include main_line *
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
