@@ -1,9 +1,8 @@
 name: Deploy to Azure Web App
-
 on:
   push:
-    branches: [ main ]  # change to 'master' if that's your default branch
-  workflow_dispatch:  # allows manual deployment
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -13,10 +12,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     
-    - name: Set up Python 3.13.3
-      uses: actions/setup-python@v4
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
       with:
-        python-version: '3.13.3'
+        python-version: '3.11'
     
     - name: Install dependencies
       run: |
